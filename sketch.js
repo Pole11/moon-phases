@@ -9,9 +9,11 @@ let d1 = 200;
 let d2 = 80;
 let a = 0;
 
+var c;
+
 function setup() {
   // it runs only one time
-  createCanvas(900, 600);
+  c = createCanvas(900, 600);
   angleMode(RADIANS);
  
 }
@@ -76,6 +78,6 @@ function keyTyped() {
   if (key === 's') {
     saveCanvas(c, 'moon-phases', 'jpg');
   }
-  // uncomment to prevent any default behavior
   return false;
 }
+
