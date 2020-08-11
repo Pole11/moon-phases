@@ -72,3 +72,10 @@ function draw() {
   circle(phaseShadowx, phaseShadowy, d2);
   
 }
+function keyTyped() {
+  if (key === 's') {
+    saveCanvas(c, 'moon-phases', 'jpg');
+  }
+  // uncomment to prevent any default behavior
+  return false;
+}
