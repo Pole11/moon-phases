@@ -70,8 +70,8 @@ function draw() {
   phaseShadowx = phasex + phaseShadowDx;
   
   stroke(0,25,25,255);
-  ellipseMode(CORNER);
-  circle(phaseShadowx, phaseShadowy, d2);
+  ellipseMode(CENTER);
+  ellipse(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
   
 }
 // save the canvas as image
