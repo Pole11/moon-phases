@@ -6,6 +6,7 @@
 * [Setup](#setup)
 * [Explanation](#explanation)
 * [Images](#images)
+* [TODO](#todo)
 
 ## General info
 I started this little project because it was hard for me to understand how moon phases work, so I decided to visualize them. I am not an astronomer but I know that the animation is not faithful to the reality, but I hope that it will help you to understand a little more how the moon phases work. 
@@ -31,3 +32,6 @@ If you have some issues understanding what the semicircles you are looking at re
 
 ## Images 
 ![image](/images/moon-phases.jpg)
+
+## TODO
+- [ ] fix the convex and concave shadow
