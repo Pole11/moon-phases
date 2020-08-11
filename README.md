@@ -5,6 +5,7 @@
 * [Technologies](#technologies)
 * [Setup](#setup)
 * [Explanation](#explanation)
+* [Images](#images)
 
 ## General info
 I started this little project because it was hard for me to understand how moon phases work, so I decided to visualize them. I am not an astronomer but I know that the animation is not faithful to the reality, but I hope that it will help you to understand a little more how the moon phases work. 
@@ -27,3 +28,6 @@ If you have some issues understanding what the semicircles you are looking at re
 * the biggest yellowish semicirle represent the illuminated half of the earth, the other half is dark, so you can't see it
 * the smaller semicircle orbiting around the earth is the moon
 * the circle on the right is the view of the moon from the earth, this is the part to look at to see the phases of the moon
+
+## Images 
+![image](/images/moon-phases.jpg)
