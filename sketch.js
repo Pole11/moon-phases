@@ -74,10 +74,10 @@ function draw() {
   circle(phaseShadowx, phaseShadowy, d2);
   
 }
+// save the canvas as image
 function keyTyped() {
   if (key === 's') {
     saveCanvas(c, 'moon-phases', 'jpg');
   }
   return false;
 }
-
