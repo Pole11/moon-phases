@@ -20,7 +20,9 @@ function setup() {
 
 function draw() {
   // it's a while loop
-  background(0,25,25,255);
+  let bg_color = color(0,25,25,255);
+  let light_color = color(255,255,75,255);
+  background(bg_color);
   
   noStroke();
   ellipseMode(CENTER);
@@ -59,19 +61,59 @@ function draw() {
   let phasex = width - width/6;
   let phasey = height / 2;
 
-  let phaseShadowy = phasey - d2/2;
-  let phaseShadowx;
+  //stroke(255,0,255);
+  line(phasex, 0, phasex, height);
 
-  fill(255,255,75,255);
-  circle(phasex, phasey, d2);
-    
-  fill(0,25,25,255);
-  phaseShadowDx = map(a, (0), (-(2 * Math.PI)),  1/2*d2,  -3/2*d2);
-  phaseShadowx = phasex + phaseShadowDx;
+  let color1 = color(0,25,25,0); //red
+  let color2 = color(0,25,25,0); //gray
+  let color3 = color(0,25,25,0); //blue
+  let color4 = color(0,25,25,0); //green
+
+  if (-Math.PI/2 < a && a < 0) {
+    color3 = light_color;
+    color4 = light_color;
+    color1 = light_color;
+    color2 = bg_color;
+  } else if (-Math.PI < a && a < -Math.PI/2) {
+    color1 = light_color;
+    color3 = bg_color;
+    color4 = bg_color;
+    color2 = bg_color;
+  } else if (-3*Math.PI/2 < a && a < -Math.PI) {
+    color4 = bg_color;
+    color2 = light_color;
+    color1 = bg_color;
+    color3 = bg_color;
+  } else if (-2*Math.PI < a && a < -3*Math.PI/2) {
+    color4 = color(0,255,0,0);
+    color3 = light_color;
+    color1 = bg_color;
+    color2 = light_color;
+  }
+
+  fill(color1);
+  //let widthMoonPhase = map(Math.sin(a), -1, 1, -d2, d2);
+  arc(phasex, phasey, d2, d2, PI/2, 3 * PI/2);
+  fill(color2);
+  arc(phasex, phasey, d2, d2, 3 * PI/2, PI/2);
+
+  let heightPhase = d2;
+  let widthPhase = map(Math.cos(a), 0, 1, 0, d2);
+
+  fill(color3);
+  arc(phasex, phasey, widthPhase, heightPhase, PI/2, 3 * PI/2);
+  fill(color4);
+  arc(phasex, phasey, widthPhase, heightPhase, 3 * PI/2, PI/2);
+
+  //let phaseShadowx = phasex - d2/2;
+  //let phaseShadowy = phasey - d2/2;
+  //phaseShadowDx = map(a, (0), (-(2 * Math.PI)),  -3/2*d2,  1/2*d2);
+  //phaseShadowx = phasex + phaseShadowDx;
+  //ellipseMode(CENTER);
+  //ellipse(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
   
-  stroke(0,25,25,255);
-  ellipseMode(CENTER);
-  ellipse(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
+  //rectMode(CENTER);
+  //rect(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
   
 }
 // save the canvas as image
