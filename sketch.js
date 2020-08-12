@@ -101,9 +101,9 @@ function draw() {
   let widthPhase = map(Math.cos(a), 0, 1, 0, d2);
 
   fill(color3);
-  arc(phasex, phasey, widthPhase, heightPhase, PI/2, 3 * PI/2);
+  arc(phasex, phasey, widthPhase - 2, heightPhase + 1, PI/2, 3 * PI/2);
   fill(color4);
-  arc(phasex, phasey, widthPhase, heightPhase, 3 * PI/2, PI/2);
+  arc(phasex, phasey, widthPhase - 2, heightPhase + 1, 3 * PI/2, PI/2);
 
   //let phaseShadowx = phasex - d2/2;
   //let phaseShadowy = phasey - d2/2;
