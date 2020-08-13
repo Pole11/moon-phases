@@ -35,10 +35,8 @@ function draw() {
   
   // moon
   a -= 0.01;    
-  if (a < -(2 * Math.PI)) {
-    a = 0;
-  }
-    
+  a %= -Math.PI*2;
+
   x = Math.cos(a) * d1/2 * 5/2;
   y = Math.sin(a) * d1/2 * 5/2;
   
@@ -92,7 +90,6 @@ function draw() {
   }
 
   fill(color1);
-  //let widthMoonPhase = map(Math.sin(a), -1, 1, -d2, d2);
   arc(phasex, phasey, d2, d2, PI/2, 3 * PI/2);
   fill(color2);
   arc(phasex, phasey, d2, d2, 3 * PI/2, PI/2);
@@ -104,16 +101,6 @@ function draw() {
   arc(phasex, phasey, widthPhase - 2, heightPhase + 1, PI/2, 3 * PI/2);
   fill(color4);
   arc(phasex, phasey, widthPhase - 2, heightPhase + 1, 3 * PI/2, PI/2);
-
-  //let phaseShadowx = phasex - d2/2;
-  //let phaseShadowy = phasey - d2/2;
-  //phaseShadowDx = map(a, (0), (-(2 * Math.PI)),  -3/2*d2,  1/2*d2);
-  //phaseShadowx = phasex + phaseShadowDx;
-  //ellipseMode(CENTER);
-  //ellipse(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
-  
-  //rectMode(CENTER);
-  //rect(phaseShadowx + d2/2, phaseShadowy + d2/2, d2, 2*d2);
   
 }
 // save the canvas as image
