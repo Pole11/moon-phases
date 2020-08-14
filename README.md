@@ -13,6 +13,10 @@ I started this little project because it was hard for me to understand how moon 
 
 I am not an expert programmer, and probably the way I wrote the code is not the best one in the world, but I am very proud about the final result because I had fun and I learned a lot writing it.
 
+You can find the files of the program in the folder moon-phases-complete.
+
+I have also done a smaller version of the moon phases animation that you can find in the repo under the folder moon-phases-small and clicking this <a href="https://editor.p5js.org/Pole/full/A3DLjxk7g">link</a>.
+
 ## Technologies
 For the animation I used:
 * <a href="https://p5js.org/">p5.js library</a>
